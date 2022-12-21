@@ -8,6 +8,7 @@ class Locators (object):
 
         self.driver = driver
 
+
 # Field for entering a mobile phone number
     @property
     def input_phone(self):
@@ -28,15 +29,35 @@ class Locators (object):
     def code_sms(self):
         return self.driver.find_element(By.ID, 'ua4ek.board:id/codeSmsPinView')
 
+# location check on the PIN code input screen (1 time)
+    @property
+    def code_pin_1_screen(self):
+        return self.driver.find_element(By.ID, 'ua4ek.board:id/textStepFirst')
+
+# location check on the PIN code input screen (2 time)
+    @property
+    def code_pin_2_screen(self):
+        return self.driver.find_element(By.ID, 'ua4ek.board:id/textStepSecond')
+
 # Pin code input field
     @property
     def code_pin(self):
         return self.driver.find_element(By.ID, 'ua4ek.board:id/codePasswordView')
 
+# checking the location of the Frog Learner on the screen
+    @property
+    def chat_screen(self):
+        return self.driver.find_element(By.ID, 'ua4ek.board:id/chat_title')
+
 # Skip training (skip chat)
     @property
     def skip_chat(self):
         return self.driver.find_element(By.ID, 'ua4ek.board:id/navigationIcon')
+
+# home screen location check
+    @property
+    def main_screen(self):
+        return self.driver.find_element(By.ID, 'ua4ek.board:id/tvCardTitle')
 
 # Billing button (on each screen, in the center, at the top)
     @property
@@ -175,7 +196,7 @@ class Locators (object):
 
 # Group payments: start a group payment
     @property
-    def start_group_payment(self):
+    def start_group_payment2(self):
         return self.driver.find_element(By.ID, 'ua4ek.board:id/bBegin')
 
 # Group payments: set up a group payment
