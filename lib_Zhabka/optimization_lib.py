@@ -1,6 +1,18 @@
 from appium import webdriver
 
 
+class BasicData:
+
+    def __init__(self, driver: webdriver.Remote):
+
+        self.driver = driver
+
+    platformName = "Android"
+    platformVersion = "12.0"
+    deviceName = "Zhabka"
+    app = "/Users/Lenovo/PycharmProjects/ZhabkaAutoTest/appZhabka/ua4ek.board-release-v2.1.44.apk"
+    serverURL = "http://127.0.0.1:4723/wd/hub"
+
 class TextWork:
 
     def __init__(self, driver: webdriver.Remote):
